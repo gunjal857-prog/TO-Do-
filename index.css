@@ -1,0 +1,282 @@
+
+/* ===== Global Styling ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f7fb;
+  color: #1e293b;
+}
+
+/* ===== Main Page ===== */
+.mainpagee {
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* ===== Navbar ===== */
+.nav {
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+  padding: 12px 5%;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  gap: 20px;
+}
+
+/* Navbar Title */
+.title h1 {
+  color: #2563eb;
+  font-size: 28px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* Navbar Buttons */
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.navitem {
+  padding: 11px 20px;
+  border: none;
+  background-color: transparent;
+  color: #475569;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.navitem:hover {
+  background-color: #eff6ff;
+  color: #2563eb;
+}
+
+/* Active Navbar Button */
+.navitem.active {
+  background-color: #2563eb;
+  color: white;
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2);
+}
+
+/* ===== Home Dashboard ===== */
+.homepage {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  padding: 35px 5%;
+}
+
+/* Task Cards */
+.card {
+  background-color: #ffffff;
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e2e8f0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+  font-size: 17px;
+  color: #64748b;
+  margin-bottom: 18px;
+}
+
+.card h3 {
+  font-size: 36px;
+  color: #2563eb;
+}
+
+/* ===== About Page ===== */
+.aboutpage {
+  margin: 35px 5%;
+  padding: 35px;
+  min-height: 300px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.aboutpage h1 {
+  font-size: 28px;
+  margin-bottom: 18px;
+  color: #2563eb;
+}
+
+.aboutpage p {
+  color: #64748b;
+  font-size: 17px;
+}
+
+/* ===== Todo List Page ===== */
+.listpage {
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  margin: 30px 5%;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.listpage > h1 {
+  font-size: 28px;
+  color: #1e293b;
+  margin-bottom: 25px;
+}
+
+/* Individual Task */
+.id {
+  padding: 18px 20px;
+  margin-bottom: 14px;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-left: 4px solid #2563eb;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+.id:hover {
+  background-color: #eff6ff;
+  transform: translateX(3px);
+}
+
+.id h3 {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #334155;
+  margin-bottom: 8px;
+}
+
+.id p {
+  font-size: 14px;
+  color: #64748b;
+}
+
+/* ===== Pagination ===== */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 25px;
+}
+
+.pagination .pagitem {
+  min-width: 42px;
+  height: 42px;
+  padding: 0 12px;
+  background-color: #ffffff;
+  color: #2563eb;
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.pagination .pagitem:hover {
+  background-color: #eff6ff;
+  border-color: #2563eb;
+}
+
+/* Currently Selected Page */
+.pagination .pagitem.active {
+  background-color: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.25);
+}
+
+
+@media (max-width: 768px) {
+  .nav {
+    padding: 14px 4%;
+  }
+
+  .nav ul {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .title h1 {
+    font-size: 23px;
+  }
+
+  .btn {
+    gap: 5px;
+  }
+
+  .navitem {
+    padding: 9px 12px;
+    font-size: 14px;
+  }
+
+  .homepage {
+    grid-template-columns: 1fr;
+    padding: 25px 4%;
+    gap: 16px;
+  }
+
+  .card {
+    padding: 22px;
+  }
+
+  .listpage {
+    margin: 20px 4%;
+    padding: 20px 15px;
+    min-height: 600px;
+  }
+
+  .aboutpage {
+    margin: 20px 4%;
+    padding: 25px 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  .nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .navitem {
+    padding: 9px 12px;
+  }
+
+  .listpage > h1 {
+    font-size: 23px;
+  }
+}
